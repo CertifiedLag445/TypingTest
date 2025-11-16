@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 :root {
-  --primary-color: #d35400;      /* Burnt orange */
-  --secondary-color: #e67e22;    /* Lighter orange */
-  --accent-color: #27ae60;       /* Green */
-  --error-color: #ff4757;        /* Bright red for errors */
-  --bg-color: #2f3542;           /* Darker background for entire site */
-  --container-bg: #404757;       /* Slightly lighter than bg for container */
-  --card-bg: #4a5366;            /* Even lighter for cards/stats */
-  --text-color: #dfe4ea;         /* Light gray for text */
+  --primary-color: #d35400;      
+  --secondary-color: #e67e22;    
+  --accent-color: #27ae60;      
+  --error-color: #ff4757;       
+  --bg-color: #2f3542;           
+  --container-bg: #404757;      
+  --card-bg: #4a5366;           
+  --text-color: #dfe4ea;         
   --border-radius: 8px;
   --max-width: 1200px;
-  --typing-bg: #2f3542;          /* Same as bg-color for typing area */
-  --correct-color: #2ecc71;      /* Bright green for correct */
-  --cursor-color: #70a1ff;       /* Light blue for cursor */
-  --stats-text: #ffffff;         /* White text for stats */
+  --typing-bg: #2f3542;          
+  --correct-color: #2ecc71;     
+  --cursor-color: #70a1ff;      
+  --stats-text: #ffffff;      
 }
 
 * {
@@ -109,15 +109,15 @@ body {
   align-items: stretch;
 }
 
-/* Typing Text Container */
+
 .typing-text {
   font-size: 24px;
   line-height: 1.6;
-  padding: 10px 20px 20px 20px; /* Minimal top padding */
+  padding: 10px 20px 20px 20px;
   border: none;
   border-radius: var(--border-radius);
   background: var(--typing-bg);
-  height: 200px;  /* Fixed height */
+  height: 200px;  
   overflow-y: auto;
   scroll-behavior: smooth;
   text-align: left;
@@ -125,7 +125,6 @@ body {
   transition: filter 0.5s;
   color: var(--text-color);
   letter-spacing: 0.5px;
-  /* Let the words wrap normally if they don't fit on one line */
   white-space: normal;
   word-break: normal;
   overflow-wrap: break-word;
@@ -133,29 +132,29 @@ body {
   margin: 0;
 }
 
-/* Hide scrollbar for WebKit browsers */
+
 .typing-text::-webkit-scrollbar {
   display: none;
 }
 
-/* Hide scrollbar for Firefox */
+
 .typing-text {
   scrollbar-width: none;
 }
 
-/* Initial Blur */
+
 .typing-text.blurred {
   filter: blur(3px);
   opacity: 0.7;
 }
 
-/* Each letter wrapped in span */
+
 .typing-text span {
   position: relative;
   transition: color 0.2s ease;
 }
 
-/* Correct & Incorrect Styling */
+
 .typing-text span.correct {
   color: var(--correct-color);
 }
@@ -165,7 +164,7 @@ body {
   text-decoration-color: var(--error-color);
 }
 
-/* Active Cursor Styling */
+
 .typing-text span.active {
   position: relative;
 }
@@ -185,7 +184,7 @@ body {
   50% { opacity: 0; }
 }
 
-/* Stats Styling */
+
 .stats {
   display: flex;
   justify-content: space-around;
@@ -235,7 +234,7 @@ body {
   border-color: var(--accent-color);
 }
 
-/* Results Overlay */
+
 .results-overlay {
   position: fixed;
   top: 0;
@@ -327,25 +326,20 @@ body {
   }
 }
 
-/* Word Container: inline-block so entire word won't break mid-line.
-   white-space: nowrap ensures the word is always on one line.
-   margin-right adds visual spacing between words. */
 .word-container {
   display: inline-block;
   white-space: nowrap;
-  margin-right: 0.5rem; /* Space between words */
+  margin-right: 0.5rem; 
   padding: 2px 0;
 }
 
-/* Ensure the paragraph inside typing-text starts at the top */
 .typing-text p {
   margin: 0;
   padding: 0;
 }
 
-/* Fade-out effect ONLY at the bottom of the typing text */
 .typing-text::before {
-  content: none; /* No fade at the top */
+  content: none; 
 }
 .typing-text::after {
   content: "";
@@ -353,7 +347,8 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 40px; /* Adjust if you want a bigger or smaller fade */
+  height: 40px;
   background: linear-gradient(to top, var(--typing-bg), transparent);
   pointer-events: none;
 }
+
