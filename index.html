@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Horizontal Letter Typing Test</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- If you rename the CSS file, update it here -->
   <link rel="stylesheet" href="TypingTest.css">
 </head>
 <body>
@@ -25,7 +24,6 @@
 
     <div class="wrapper">
       <div class="content-box">
-        <!-- The text container starts blurred -->
         <div class="typing-text blurred" id="text">
           <p></p>
         </div>
@@ -35,11 +33,9 @@
           <div>WPM: <span id="wpm">0</span></div>
           <div>CPM: <span id="cpm">0</span></div>
         </div>
-        <!-- Try Again button is hidden until game over -->
         <button id="reset" style="display: none;">Try Again</button>
       </div>
 
-      <!-- Visible input field for typing -->
       <input 
         type="text" 
         id="inputField" 
@@ -49,7 +45,6 @@
     </div>
   </div>
 
-  <!-- Final results overlay -->
   <div id="resultsOverlay" class="results-overlay hidden">
     <div class="results-content">
       <h2>Test Complete!</h2>
@@ -70,3 +65,4 @@
   <script src="TypingTest.js"></script>
 </body>
 </html>
+
