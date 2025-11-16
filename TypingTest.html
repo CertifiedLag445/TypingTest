@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Horizontal Letter Typing Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- If you rename the CSS file, update it here -->
+  <link rel="stylesheet" href="TypingTest.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Typing Speed Test</h1>
+    <div class="settings">
+      <div class="duration">
+        <label for="timeSelect">Test Duration:</label>
+        <select id="timeSelect">
+          <option value="15">15 seconds</option>
+          <option value="30">30 seconds</option>
+          <option value="45">45 seconds</option>
+          <option value="60" selected>60 seconds</option>
+        </select>
+      </div>
+      <button id="startButton">Start Test</button>
+    </div>
+
+    <div class="wrapper">
+      <div class="content-box">
+        <!-- The text container starts blurred -->
+        <div class="typing-text blurred" id="text">
+          <p></p>
+        </div>
+        <div class="stats" role="status" aria-live="polite">
+          <div>Time Left: <span id="time" aria-label="seconds remaining">60</span>s</div>
+          <div>Accuracy: <span id="accuracy" aria-label="typing accuracy">100%</span></div>
+          <div>WPM: <span id="wpm">0</span></div>
+          <div>CPM: <span id="cpm">0</span></div>
+        </div>
+        <!-- Try Again button is hidden until game over -->
+        <button id="reset" style="display: none;">Try Again</button>
+      </div>
+
+      <!-- Visible input field for typing -->
+      <input 
+        type="text" 
+        id="inputField" 
+        autocomplete="off" 
+        placeholder="Start typing here..."
+      >
+    </div>
+  </div>
+
+  <!-- Final results overlay -->
+  <div id="resultsOverlay" class="results-overlay hidden">
+    <div class="results-content">
+      <h2>Test Complete!</h2>
+      <p>Your final stats:</p>
+      <p>WPM: <span id="finalWpm">0</span></p>
+      <p>CPM: <span id="finalCpm">0</span></p>
+      <p>Accuracy: <span id="finalAccuracy">100%</span></p>
+      <button id="closeResults">Close</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <li>WPM = Words Per Minute</li>
+    <li>CPM = Characters Per Minute</li>
+    <li>Accuracy = ((Correct letters typed – mistakes) / letters typed) × 100%</li>
+  </footer>
+
+  <script src="TypingTest.js"></script>
+</body>
+</html>
